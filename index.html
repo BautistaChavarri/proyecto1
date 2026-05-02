@@ -4,24 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Sitio Personal</title>
+    <!-- Importacion del archivo CSS  -->
+    <link rel="stylesheet" href="style.css">
+    <!-- https://boxicons.com/ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
     <header>
-        <h1>Mi primer Sitio</h1>
+        <h1 class="logo">BA</h1>
         <nav>
-            <ul>
+            <ul class="navlist">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="intereses.html">Intereses</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <p>Me llamo Bautista. Tengo 22 años y soy estudiante en la Licenciatura en gestion de tecnologia de la informacion.</p>
-        <img src="Infografia.jpg" alt="Mi infografia">
-
     
-    </main>
+    <section class="hero">
+        <div class="icons">
+            <a href="https://instagram.com" target="_blank"><i class='bx bxl-instagram'></i></a>
+            <a href="https://facebook.com" target="_blank"><i class='bx bxl-facebook'></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class='bx bxl-linkedin'></i></a>
+        </div>
+
+        <section>
+            <div class="hero-text">
+                <h5>Estudiante en Ingeniería en Sistemas</h5>
+                <h1>Bautista Chavarri</h1>
+                <p>¡Hola! Mi nombre es Bautista Chavarri, Estudiante de la Licenciatura en Gestión de Tecnología de la Información. Buenas! Soy Bautista Chavarri, tengo 22 años y me dedico a las finanzas hace aproximadamente 1 año y medio. Actualmente estoy cursando la Licenciatura en Gestión de Tecnología de la Información, desarrollándome en el primer año pero con 18 materias aprobadas debido a que recien migro de la Ingeniería en Sistemas. Si queres saber más sobre mi clickea en el boton de Intereses.</p>
+                <a href="#" class="cv">Contactame</a>
+                <a href="https://github.com" class="github" target="_blank">MI GITHUB</a>
+            </div>
+        </section>
+
+        <section>
+            <div class="hero-img">
+                <img src="Infografia.jpg" alt="Mi infografia">
+            </div>
+        </section>
+    </section>
     
 </body>
 </html>

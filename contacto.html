@@ -3,27 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Sitio Personal</title>
+    <title>Mi Sitio Personal - Contacto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
     <header>
-        <h1>Mi primer Sitio</h1>
+        <h1 class="logo">BA</h1>
         <nav>
-            <ul>
+            <ul class="navlist">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="intereses.html">Intereses</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <h2>Contactame</h2>
-        <ul>
-            <li><a href="mailto:bchavarri@uade.edu.ar">bchavarri@uade.edu.ar</a></li></li>
-            <li><p>Teléfono: 11 3388 - 2200</p></li>
 
-        </ul>
-    </main>
+    <div class="contacto-container">
+        <div class="contacto-content">
+            <!-- Tarjeta Teléfono -->
+            <div class="contacto-card">
+                <i class='bx bxs-phone'></i>
+                <h3>Mi Número</h3>  
+                <a href="tel:+5411234567890">+54 11 2345 6789</a>
+            </div>
+
+            <!-- Tarjeta Mail -->
+            <div class="contacto-card">
+                <i class='bx bxs-envelope'></i>
+                <h3>Mi Mail</h3>
+                <a href="mailto:bchavarri@uade.edu.ar">bchavarri@uade.edu.ar</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <h5>Bautista Chavarri | Mi primer sitio web</h5>
+        <p>© 2026 Todos los derechos reservados.</p>
+        <nav class="footer-nav">
+            <a href="index.html">Inicio</a>
+            <a href="intereses.html">Intereses</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </footer>
     
 </body>
 </html>

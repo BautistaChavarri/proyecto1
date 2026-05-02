@@ -3,28 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Sitio Personal</title>
+    <title>Mi Sitio Personal - Intereses</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
     <header>
-        <h1>Mi primer Sitio</h1>
+        <h1 class="logo">BA</h1>
         <nav>
-            <ul>
+            <ul class="navlist">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="intereses.html">Intereses</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <h2>Intereses</h2>
-        <ul>
-            <li><p>Me gusta mucho el deporte en general. Practico fútbol, padel y jiu jitsu. Ademas voy al gimnasio!</p></li>
-            <li><p>Soy fanatico de River Plate. Disfruto mucho ir a la cancha y ver los partidos con mi familia.</p></li>
-            <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi consectetur laborum, dolores fugit maxime quibusdam, odio optio, nihil quam culpa reiciendis quas numquam iste quisquam quo debitis suscipit tempore unde.</p></li>
-            </ul>
-    
-    </main>
+
+    <section class="hero">
+        
+
+        <section style="padding-top: 120px; width: 100%; display: flex; justify-content: center; align-items: start;">
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; align-items: start; width: 100%; max-width: none; padding: 0 40px;">
+            
+            <!-- Tarjeta Deporte -->
+            <div class="interest-card">
+                <h3>Deporte</h3>
+                <p>Me gusta jugar al fútbol con mis amigos, incluso tenemos un equipo llamado Anakra. También sigo a mi equipo favorito, River Plate y voy a la cancha frecuentemente.</p>
+                <div class="card-image">
+                    <img src="Anakra.jpeg" alt="Deporte">
+                </div>
+            </div>
+
+            <!-- Tarjeta Viajes -->
+            <div class="interest-card">
+                <h3>Viajes</h3>
+                <p>Disfruto viajar y conocer nuevos lugares y culturas, ya sea con familia o amigos. Abajo dejo una imagen de mi última visita a Córdoba!</p>
+                <div class="card-image">
+                    <img src="Cordoba.jpeg" alt="Viajes">
+                </div>
+            </div>
+
+            <!-- Tarjeta Mascotas -->
+            <div class="interest-card">
+                <h3>Mascotas</h3>
+                <p>Tengo 3 perros, Pepa, Loki y Shiva. Pepa es la negra, y es la mayor. Shiva es la marrón clarita, y es la del medio y Loki es el marrón oscuro y es el mas chico.</p>
+                <div class="card-image">
+                    <img src="Perritos.jpeg" alt="Mascotas">
+                </div>
+            </div>
+
+            </div>
+        </section>
+    </section>
     
 </body>
 </html>

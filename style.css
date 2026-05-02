@@ -1,0 +1,354 @@
+ .roboto-mono-<uniquifier> {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+ }
+
+ .bytesized-regular {
+    font-family: "Bytesized", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+/* NORMALIZACION */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*Esto mantiene el ancho y alto a pesar de padding y border*/
+    font-family: "Roboto mono", monospace;
+    list-style: none; 
+    text-decoration: none; 
+    color: white;
+}
+
+body{
+    background-color: black /*TODO, borrar cdo tenemos el fondo final*/
+}
+
+header{
+    position: fixed; /* Para que el header quede fijado en la parte superior*/
+    right: 0;
+    top: 0;
+    z-index: 100; /*Esto hace que el header se muestre por encima*/
+    width: 100%;
+    display: flex; /*Elementos en linea*/
+    align-items:center; /*Centra verticalmente*/
+    justify-content: space-between; /*Que los elementos se separen*/
+    padding: 15px 3%;
+    background-color: transparent;
+}
+
+
+.logo{
+    visibility: hidden;
+    font-size: 30px;
+    font-weight: 800;
+    border: 2px solid white;
+}
+
+.navlist{
+    display: flex; /*Elementos de UL en linea*/
+}
+
+.navlist a {
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all .5s ease;
+}
+
+.navlist a:hover {
+    border-bottom: 2px solid white;
+}
+
+#menu-icon{
+    display: none; /*Para que solo se vea cuando la pagina colapse horizontalmente*/
+} 
+
+#menu-icon{
+    font-size: 35px;
+    z-index: 101; /*Para que este sobre el header*/
+    cursor: pointer; /*Pone una manito cuando estoy arriba*/
+}
+
+#menu-toggle{
+    display: none; /*NUNCA quiero que se vea el checkbox*/
+}
+
+.menu-icon-action{
+    display: none; /*Para que no se le pueda hacer click*/
+}
+
+.hero{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%); /*Fondo de color gradiente, o sea degrade*/
+    position: relative; /*Para que sea relativo al contenedor(permite usar top bottom left y right)*/
+    display: grid; /*Para que el hero se pueda dividir en 2 columnas*/
+    grid-template-columns: 1fr 1fr; /* las 2 columnas*/
+    align-items: center; /*Alineo verticalmente*/
+    gap: 2rem; /*espacio de 2 rem entre las 2 columnas*/
+
+}
+
+section{
+    padding: 0 8%;
+}
+
+.hero-text h5{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+.hero-text h1{
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 50px;
+    line-height: 1;
+    margin: 0 0 30px;
+}
+
+
+.hero-text h4{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.hero-text p{
+    font-size: 80%;
+    margin-bottom: 40px;
+    line-height: 1.9;
+}
+
+.hero-img img{
+    width:400px;
+    margin: 10% 0 0 10%;
+    height: auto;
+    border: 2px solid rgb(0, 0, 16);
+    border-radius: 20px;
+    transition: all 5s linear;
+}
+
+.hero-img img:hover{
+    width: 450px;
+    opacity: 0.6;
+}
+
+.hero-text a{
+    display: inline-block;
+    background-color: #4d4d4d;
+    border: 1px solid transparent;
+    padding: 15px 30px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .5s ease;
+
+}
+
+.hero-text a:hover{
+    background-color: transparent;
+    border: 1px solid white;
+    transform: translateX(8px);
+}
+
+.hero-text a.github{
+    background-color: transparent;
+    border: 1px solid white;
+    margin-left: 20px;
+}
+
+.hero-text a.cv i{
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.icons{
+    position: absolute;
+    top: 50vh;
+    padding: 0 3%;
+    transform:translateY(-50%);
+}
+
+.icons i {
+    display: block;
+    margin: 26px 0;
+    font-size: 24px;
+    transition: all .5s ease;
+}
+
+.icons i:hover{
+    color: #4d4d4d;
+    transform:translate(4px);
+}
+
+.scroll-down{
+    position: absolute;
+    bottom: 6%;
+    right: 3%;
+}
+
+.scroll-down i{
+    display: block;
+    padding: 12px;
+    font-size: 20px;
+    background-color: #21383d;
+    border-radius: 30px;
+    transition: all .5s ease;
+}
+
+.scroll-down i:hover{
+    transform: translateY(4px);
+
+}
+
+/* TARJETAS DE INTERESES */
+
+.interest-card {
+    background-color: #2a2a2a;
+    width:330px;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    transition: all .5s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.interest-card:hover {
+    background-color: #3a3a3a;
+    transform: translateY(-10px);
+}
+
+.interest-card h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.interest-card p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.card-image {
+    margin-top: 20px;
+}
+
+.card-image img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 15px;
+    transition: all .5s ease;
+}
+
+/* PÁGINA DE CONTACTO */
+
+.contacto-container {
+    min-height: 100vh;
+    background: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px 200px;
+}
+
+.contacto-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.contacto-card {
+    background-color: #6b6a6a;
+    border-radius: 15px;
+    padding: 60px 40px;
+    text-align: center;
+    transition: all .5s ease;
+}
+
+.contacto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.contacto-card i {
+    font-size: 50px;
+    color: #31494e;
+    margin-bottom: 20px;
+}
+
+.contacto-card h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.contacto-card a {
+    font-size: 20px;
+    color: #ff6600;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all .3s ease;
+}
+
+.contacto-card a:hover {
+    color: #ff8c33;
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: #e0e0e0;
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid #ccc;
+    color: #333;
+}
+
+.footer h5 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.footer p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer-nav a {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+
+.footer-nav a:hover {
+    color: #31494e;
+    text-decoration: underline;
+}
