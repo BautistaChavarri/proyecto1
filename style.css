@@ -69,12 +69,6 @@ header{
     display: none; /*Para que solo se vea cuando la pagina colapse horizontalmente*/
 } 
 
-#menu-icon{
-    font-size: 35px;
-    z-index: 101; /*Para que este sobre el header*/
-    cursor: pointer; /*Pone una manito cuando estoy arriba*/
-}
-
 #menu-toggle{
     display: none; /*NUNCA quiero que se vea el checkbox*/
 }
@@ -254,6 +248,26 @@ section{
     transition: all .5s ease;
 }
 
+/* INTERESES GRID */
+
+.interests-section {
+    padding-top: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: start;
+    width: 100%;
+    max-width: none;
+    padding: 0 40px;
+}
+
 /* PÁGINA DE CONTACTO */
 
 .contacto-container {
@@ -351,4 +365,213 @@ section{
 .footer-nav a:hover {
     color: #31494e;
     text-decoration: underline;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablet */
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 101;
+    }
+
+    .navlist {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 20px;
+        border-radius: 10px;
+        display: none;
+    }
+
+    #menu-toggle:checked ~ nav .navlist {
+        display: flex;
+    }
+
+    .navlist a {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .hero-img img {
+        width: 100%;
+        max-width: 300px;
+        margin: 20px auto;
+    }
+
+    .icons {
+        position: static;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .icons i {
+        margin: 0 15px;
+    }
+
+    section {
+        padding: 0 5%;
+    }
+
+    .interest-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .interests-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    .contacto-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contacto-card {
+        padding: 40px 20px;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    #menu-icon {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        z-index: 101;
+    }
+
+    .navlist {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 150px;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 15px;
+        border-radius: 10px;
+        display: none;
+    }
+
+    #menu-toggle:checked ~ nav .navlist {
+        display: flex;
+    }
+
+    header {
+        padding: 10px 5%;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .hero-text h1 {
+        font-size: 30px;
+    }
+
+    .hero-text h5 {
+        font-size: 12px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .hero-text a {
+        padding: 12px 20px;
+        font-size: 12px;
+    }
+
+    .hero-img img {
+        max-width: 250px;
+    }
+
+    .icons i {
+        font-size: 20px;
+        margin: 0 10px;
+    }
+
+    .interest-card {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .interests-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .interest-card h3 {
+        font-size: 24px;
+    }
+
+    .interest-card p {
+        font-size: 12px;
+    }
+
+    .card-image img {
+        max-width: 200px;
+    }
+
+    .contacto-container {
+        padding: 80px 10px 100px;
+    }
+
+    .contacto-card {
+        padding: 30px 15px;
+    }
+
+    .contacto-card h3 {
+        font-size: 24px;
+    }
+
+    .contacto-card a {
+        font-size: 16px;
+    }
+
+    .footer {
+        padding: 20px 10px;
+    }
+
+    .footer h5 {
+        font-size: 16px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+
+    .footer-nav a {
+        font-size: 12px;
+    }
 }
